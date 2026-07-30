@@ -13,7 +13,7 @@ function getComputerChoice() {
 }
 
 function getHumanChoice() {
-  const result = prompt("Enter your choice: ");
+  const result = prompt("Enter your choice: ").toLowerCase();
   console.log(typeof result);
   return result;
 }
