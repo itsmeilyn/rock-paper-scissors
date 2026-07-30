@@ -16,5 +16,9 @@ function getHumanChoice() {
   return prompt("Enter your choice: ");
 }
 
+// player and computer scores
+let humanScore = 0;
+let computerScore = 0;
+
 const computerSelection = getComputerChoice();
 const humanSelection = getHumanChoice();
