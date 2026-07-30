@@ -13,12 +13,32 @@ function getComputerChoice() {
 }
 
 function getHumanChoice() {
-  return prompt("Enter your choice: ");
+  const result = prompt("Enter your choice: ");
+  console.log(typeof result);
+  return result;
 }
 
 // player and computer scores
 let humanScore = 0;
 let computerScore = 0;
 
+function playRound(humanChoice, computerChoice) {
+  if (
+    (humanChoice === "rock" && computerChoice === "scissors") ||
+    (humanChoice === "paper" && computerChoice === "rock") ||
+    (humanChoice === "scissors" && computerChoice === "paper")
+  ) {
+    humanScore++;
+    console.log(`You win! you:${humanChoice} beats com:${computerChoice}`);
+  } else if (humanChoice === computerChoice) {
+    console.log(`"Tie! you:${humanChoice}, com:${computerChoice}`);
+  } else {
+    computerScore++;
+    console.log(`You lose! com:${computerChoice} beats you:${humanChoice}`);
+  }
+}
+
 const computerSelection = getComputerChoice();
 const humanSelection = getHumanChoice();
+
+playRound(humanSelection, computerSelection);
