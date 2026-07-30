@@ -12,4 +12,9 @@ function getComputerChoice() {
   }
 }
 
+function getHumanChoice() {
+  return prompt("Enter your choice: ");
+}
+
 const computerSelection = getComputerChoice();
+const humanSelection = getHumanChoice();
