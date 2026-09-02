@@ -12,12 +12,6 @@ function getComputerChoice() {
   }
 }
 
-function getHumanChoice() {
-  const result = prompt("Enter your choice: ").toLowerCase();
-  // console.log(typeof result);
-  return result;
-}
-
 function playGame(time) {
   let humanScore = 0;
   let computerScore = 0;
