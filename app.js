@@ -14,21 +14,29 @@ function getComputerChoice() {
 
 let humanScore = 0;
 let computerScore = 0;
+let total_games = 0;
 
 function playRound(humanChoice, computerChoice) {
-  if (
-    (humanChoice === "rock" && computerChoice === "scissors") ||
-    (humanChoice === "paper" && computerChoice === "rock") ||
-    (humanChoice === "scissors" && computerChoice === "paper")
-  ) {
-    humanScore++;
-    console.log(`You win! you:${humanChoice} beats com:${computerChoice}`);
-  } else if (humanChoice === computerChoice) {
-    console.log(`"Tie! you:${humanChoice}, com:${computerChoice}`);
-  } else {
-    computerScore++;
-    console.log(`You lose! com:${computerChoice} beats you:${humanChoice}`);
+  if(total_games !== 5) {
+    if (
+        (humanChoice === "rock" && computerChoice === "scissors") ||
+        (humanChoice === "paper" && computerChoice === "rock") ||
+        (humanChoice === "scissors" && computerChoice === "paper")
+    ) {
+      humanScore++;
+      total_games++;
+
+      console.log(`You win! you:${humanChoice} beats com:${computerChoice}`);
+    } else if (humanChoice === computerChoice) {
+      total_games++;
+      console.log(`"Tie! you:${humanChoice}, com:${computerChoice}`);
+    } else {
+      computerScore++;
+      total_games++
+      console.log(`You lose! com:${computerChoice} beats you:${humanChoice}`);
+    }
   }
+
 }
 
 // console.log(`Game over! human:${humanScore} computer:${computerScore}`);
