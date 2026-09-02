@@ -38,4 +38,9 @@ function playGame(time) {
   console.log(`Game over! human:${humanScore} computer:${computerScore}`);
 }
 
-playGame(5);
+// DOM
+const rock = document.querySelector("#rock");
+const paper = document.querySelector("#paper");
+const scissors = document.querySelector("#scissors");
+
+rock.addEventListener("click", () => console.log("Rock clicked!"));
