@@ -7,13 +7,20 @@
   </head>
   <body>
     <h1>Rock Paper Scissors</h1>
-
-    <button id="rock">Rock</button>
-    <button id="paper">Paper</button>
-    <button id="scissors">Scissors</button>
-    <div class="display">
-      <h2>SCORE: </h2>
+    <div class="tabButtons">
+      <button id="rock">Rock</button>
+      <button id="paper">Paper</button>
+      <button id="scissors">Scissors</button>
     </div>
+    <div class="display">
+      <h2>Scoreboard</h2>
+      <p>Round: <span id="round">0</span> / 5</p>
+      <p>YOU: <span id="playerScore">0</span></p>
+      <p>COMPUTER: <span id="computerScore">0</span></p>
+      <p>RESULT: <span id="result">-</span></p>
+      <p id="final"></p>
+    </div>
+    <button id="btnReset">Reset</button>
     <script src="app.js"></script>
   </body>
 </html>
