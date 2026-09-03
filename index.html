@@ -2,29 +2,12 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>rock paper scissors</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>rock-paper-scissors</title>
   </head>
   <body>
-    <div class="card">
-      <h1>Rock Paper Scissors</h1>
-      <div class="tabButtons">
-        <button id="rock">Rock</button>
-        <button id="paper">Paper</button>
-        <button id="scissors">Scissors</button>
-      </div>
-      <div class="display">
-        <h2>Scoreboard</h2>
-        <p>Round: <span id="round">0</span> / 5</p>
-        <p>YOU: <span id="playerScore">0</span></p>
-        <p>COMPUTER: <span id="computerScore">0</span></p>
-        <p>RESULT: <span id="result">-</span></p>
-        <p id="final"></p>
-      </div>
-      <button id="btnReset">Reset</button>
-    </div>
-
-    <script src="./app.js"></script>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
